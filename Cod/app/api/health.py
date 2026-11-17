@@ -21,7 +21,7 @@ def readiness_check(db: Session = Depends(get_db)) -> dict[str, str]:
     try:
         db.execute(text("SELECT 1"))
     except Exception as exc:
-        # No exponer detalles internos de conexión al consumidor de la API.
+        # No exponer detalles internos de conexión al consumidor de la API
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="Base de datos no disponible",

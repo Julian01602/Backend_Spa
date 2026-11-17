@@ -1,0 +1,24 @@
+GUÍA RÁPIDA PARA SUBIR EL PROYECTO CON GIT
+
+Desde la carpeta raíz del proyecto (donde está este archivo):
+
+1. Verificar la rama y los cambios:
+   git status
+
+2. Agregar los archivos al área de preparación:
+   git add .
+
+3. Verificar que quedaron agregados:
+   git status
+
+4. Crear el commit:
+   git commit -m "feat: implementacion"
+
+5. Subir la rama actual al repositorio remoto:
+   git push origin main
+
+IMPORTANTE:
+- El mensaje 'nothing added to commit but untracked files present' indica que faltó ejecutar git add.
+- Si trabajas en otra rama, reemplaza main por el nombre de esa rama en el comando git push.
+- No se incluye .env porque puede contener contraseñas o claves privadas. Usa .env.example como plantilla y conserva tus valores locales en un .env que no se suba a Git.
+- No es necesario subir node_modules ni el entorno virtual de Python; se excluyen mediante .gitignore.
